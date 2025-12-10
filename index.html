@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cornelia Manda | Portfolio | Home Page </title>
-      <!-- Made by: Cornelia Manda, December 10th, 2025 for GBDA228--> 
-  
+    <title>Cornelia Manda | Portfolio | Home Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet"> 
-  <!-- asked claude to give me the href for the google font's playfair display & roboto, it wasn't working when I linked it not sure why, very useful thank you claude --> 
-  
+   
     <style>
         /* the global reset & typography choices */
         * {
@@ -26,11 +23,11 @@
             background-color: #E0E2DF; 
         }
 
-        h1, h2, h3, a {
+        h1, h2, h3, a, th {
             font-family: "Playfair Display", serif;
         }
 
-        /*  layout - the 1200px centered container  */
+        /* layout - the 1200px centered container  */
         .container {
             max-width: 1200px; /* */
             margin: 0 auto;    
@@ -41,15 +38,16 @@
             position: relative; 
         }
 
-        /*  navigation area  */
+        /* navigation area  */
         header {
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
             background-color: #DDBDBE; 
-            padding: 40px 60px; 
+            padding: 15px 60px; 
         }
 
+        /* it's just my name in the corner but ideally i want it to be a logo, just not at that stage yet!*/
         .logo {
             font-family: "Playfair Display", serif;
             font-size: 1.5em;
@@ -75,6 +73,7 @@
             color: #655C5B; 
             font-size: 1.1em;
             transition: color 0.3s ease;
+          /* i wanted more feedback for the user, so i did my research on how i could and i asked claude how i could do it and asked for an explanation*/
         }
 
         /* home link white as it's on that page already */
@@ -87,7 +86,7 @@
             cursor: pointer;
         }
 
-        /*  headshot area/section  */
+        /* headshot area/section  */
         #headshot {
             margin-top: 0; 
             position: relative;
@@ -101,13 +100,10 @@
             opacity: 0.8; 
         }
 
-        /*  overlay content container wrap  */
+        /* overlay content container wrap  */
         .overlay-container {
             position: absolute; /* */
-            
-    
             top: 33%; 
-            
             left: 0;
             right: 0; 
             z-index: 10;
@@ -184,6 +180,66 @@
             cursor: pointer;
         }
 
+        /* --- Footer Styles (Copied from Contact Page) --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 0; /* Adjusted to 0 to sit flush under image if desired */
+            color: #655C5B;
+            font-size: 0.9em;
+            border-top: 1px solid #DDBDBE; 
+        }
+
+        /* Footer Table Layout */
+        .footer-table-wrapper {
+            display: flex; /* Centering the table wrapper */
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-table {
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .footer-table th {
+            color: #816B6E;
+            font-size: 1.1em;
+            padding: 5px 10px 5px 0;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .footer-table th:not(:first-child) {
+            padding-left: 30px; 
+        }
+
+        .footer-table td {
+            padding: 5px 0;
+            font-family: "Roboto", sans-serif;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .footer-table a {
+            color: #655C5B;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .footer-table a:hover {
+            color: #816B6E;
+            border-bottom: 1px solid #816B6E;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 0.8em;
+        }
+
     </style>
 </head>
 <body>
@@ -219,7 +275,27 @@
                 </div>
 
             </div>
+           
         </section>
+
+        <footer>
+            <div class="footer-table-wrapper">
+                <table class="footer-table">
+                    <tr>
+                        <th>Email:</th>
+                        <td><a href="mailto:cmanda@uwaterloo.ca">cmanda@uwaterloo.ca</a></td>
+                        
+                        <th>School:</th>
+                        <td><a href="https://uwaterloo.ca/global-business-digital-arts/" target="_blank">University of Waterloo</a></td>
+                        
+                        <th>Location:</th>
+                        <td>Kitchener-Waterloo, Ontario</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="copyright">&copy; 2025 Cornelia Manda. All Rights Reserved.</p>
+        </footer>
 
     </div>
 
