@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cornelia Manda | Portfolio</title>
-    
+    <title>Cornelia Manda | Portfolio | Home Page </title>
+      <!-- Made by: Cornelia Manda, December 10th, 2025 for GBDA228--> 
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet"> 
+  <!-- asked claude to give me the href for the google font's playfair display & roboto, it wasn't working when I linked it not sure why, very useful thank you claude --> 
+  
     <style>
-        /* --- Global Reset & Typography --- */
+        /* the global reset & typography choices */
         * {
-            [cite_start]box-sizing: border-box; [cite: 310]
+            box-sizing: border-box; 
         }
 
         body {
@@ -21,129 +23,131 @@
             font-family: "Roboto", sans-serif;
             font-size: 16px;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #E0E2DF; 
         }
 
         h1, h2, h3, a {
             font-family: "Playfair Display", serif;
         }
 
-        /* --- Layout: 1200px Centered Container --- */
+        /*  layout - the 1200px centered container  */
         .container {
-            [cite_start]max-width: 1200px; [cite: 664]
-            [cite_start]margin: 0 auto; [cite: 421]
-            padding: 20px 60px; 
-            background-color: #ffffff;
+            max-width: 1200px; /* */
+            margin: 0 auto;    
+            padding: 0; 
+            background-color: #E0E2DF; 
             min-height: 100vh;
+            /* I was to upgrade my code for viewport accessibility, and researching discovered vh, so it takes up the whole screen*/
             position: relative; 
         }
 
-        /* --- Navigation --- */
+        /*  navigation area  */
         header {
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
-            padding: 40px 0;
+            background-color: #DDBDBE; 
+            padding: 40px 60px; 
         }
 
         .logo {
+            font-family: "Playfair Display", serif;
             font-size: 1.5em;
-            font-weight: 700;
+            font-weight: 400; 
             letter-spacing: 1px;
-            text-transform: uppercase;
+            color: #655C5B; 
         }
 
         nav ul {
-            list-style: none;
+            list-style: none; /* */
             padding: 0;
             margin: 0;
             text-align: right;
         }
 
         nav li {
-            display: inline-block;
+            display: inline-block; /* */
             margin-left: 40px;
         }
 
         nav a {
-            text-decoration: none;
-            color: #000;
+            text-decoration: none; /* */
+            color: #655C5B; 
             font-size: 1.1em;
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #777;
+        /* home link white as it's on that page already */
+        nav li:first-child a {
+            color: white;
         }
 
-        /* --- Headshot Section --- */
+        nav a:hover {
+            color: white; 
+            cursor: pointer;
+        }
+
+        /*  headshot area/section  */
         #headshot {
-            margin-top: 50px;
-            position: relative; 
-            height: 600px;      
+            margin-top: 0; 
+            position: relative;
         }
 
         .headshot-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            
-            /* Anchors image to the top */
-            object-position: top center; 
-            
-            background-color: #e0e0e0;
+            width: 1200px;
+            height: 1200px;
+            background-color: #E0E2DF; 
             display: block;
+            opacity: 0.8; 
         }
 
-        /* --- Overlay Content Wrapper --- */
+        /*  overlay content container wrap  */
         .overlay-container {
-            position: absolute;
+            position: absolute; /* */
             
-            /* --- UPDATED HERE --- */
-            /* Increased from 25% to 45% to move text lower */
-            top: 45%; 
+    
+            top: 33%; 
             
             left: 0;
             right: 0; 
             z-index: 10;
-            
             display: flex;
             justify-content: center;
         }
 
-        /* Wrapper to hold I'M and Name together */
+        /* container wrapper so it can hold I'M and Cornelia Manda together so they aligned */
         .content-wrapper {
             position: relative;
             width: fit-content; 
         }
 
-        /* --- The Rotated "I'M" --- */
+        /* I'M rotated */
         .rotated-text {
             font-family: "Playfair Display", serif;
-            font-size: 3em;
+            font-size: 5em;
             font-weight: 700;
             letter-spacing: 3px;
             color: #fff; 
             
             position: absolute;
             bottom: 100%; 
-            left: 1px;      
+            left: 0;      
             
-            transform: rotate(90deg);
+            transform: rotate(90deg); /* 90 degree looks better than -90 */
             transform-origin: bottom left;
 
-            margin-bottom: 90px; 
-            margin-left: 0px; 
+            margin-bottom: 180px; 
+            margin-left: 5px; 
         }
 
-        /* --- Main Title Group --- */
+        /* the main title for my name */
         .title-group {
             color: #fff;
             text-align: center; 
         }
 
         .title-group h1 {
-            font-size: 5.13em; 
+            font-size: 6.5em; 
             margin: 0;
             line-height: 1;
             letter-spacing: 2px;
@@ -152,34 +156,32 @@
             white-space: nowrap; 
         }
 
-        /* --- Button with Rotate Effect --- */
+        /* very necessary call to action button, view portfolio with a beautiful rotation so it matches my theme of rotate hehe */
         .cta-button {
             display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
-            background-color: #fff;
-            color: #000;
+            margin-top: 200px;
+            
+            padding: 25px 80px;
+            font-size: 2em; 
+            
+            background-color: #C99B9B; 
+            color: white;              
+            border: 2px solid #C99B9B; 
+            
             text-decoration: none;
-            font-family: "Roboto", sans-serif;
+            text-transform: capitalize; 
+            
+            font-family: "Playfair Display", serif;
             font-weight: bold;
-            text-transform: uppercase;
-            border: 2px solid #000;
             transition: all 0.4s ease;
         }
 
         .cta-button:hover {
-            background-color: #000;
+            background-color: #816B6E; 
+            border-color: #816B6E;     
             color: #fff;
-            transform: rotate(2deg); 
+            transform: rotate(2deg);
             cursor: pointer;
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 50px 0;
-            border-top: 1px solid #eee;
-            margin-top: 50px;
         }
 
     </style>
@@ -218,10 +220,6 @@
 
             </div>
         </section>
-
-        <footer>
-            <p>&copy; 2025 Cornelia Manda. Designed for GBDA 228.</p>
-        </footer>
 
     </div>
 
